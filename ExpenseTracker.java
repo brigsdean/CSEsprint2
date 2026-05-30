@@ -2,9 +2,18 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Main class that manages all expenses and handles user interaction.
+ * This is the core logic of the Expense Tracker application.
+ */
+
 public class ExpenseTracker {
     private final List<Expense> expenses;
     private final Scanner scanner;
+    
+    /**
+     * Constructor - initializes the expense list and scanner
+     */
     
     public ExpenseTracker() {
         this.expenses = new ArrayList<>();

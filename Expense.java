@@ -1,19 +1,31 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Represents a single expense entry in the expense tracker.
+ * This class demonstrates encapsulation by keeping fields private
+ * and providing getters and setters.
+ */
+
 public class Expense {
     private String description;
     private double amount;
     private String category;
     private final LocalDate date;
     
+    /**
+     * Constructor that creates an expense with today's date
+     */
+
     public Expense(String description, double amount, String category) {
         this.description = description;
         this.amount = amount;
         this.category = category;
         this.date = LocalDate.now();
     }
-    
+    /**
+     * Overloaded constructor that allows specifying a custom date
+     */
     public Expense(String description, double amount, String category, LocalDate date) {
         this.description = description;
         this.amount = amount;
